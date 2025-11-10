@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Melih Aksoy - Personal Website">
-    <title>Melih Aksoy</title>
+    <meta name="description" content="Melih Aksoy - Sr. Android Engineer">
+    <title>Melih Aksoy - Sr. Android Engineer</title>
     <style>
         * {
             margin: 0;
@@ -18,19 +18,16 @@
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            padding: 60px 40px;
-            text-align: center;
+            padding: 60px 50px;
+            margin: 0 auto;
             animation: fadeIn 0.8s ease-in;
         }
 
@@ -43,6 +40,11 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
         }
 
         .profile-image {
@@ -66,20 +68,133 @@
             color: #2d3748;
         }
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: #718096;
-            margin-bottom: 30px;
+        .title {
+            font-size: 1.3rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+            margin: 40px 0;
+        }
+
+        .section {
+            margin-bottom: 45px;
+            text-align: left;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #2d3748;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
         }
 
         .bio {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #4a5568;
-            margin-bottom: 40px;
             line-height: 1.8;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            text-align: justify;
+        }
+
+        .experience-item {
+            margin-bottom: 35px;
+            padding-left: 20px;
+            border-left: 3px solid #667eea;
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .period {
+            font-size: 0.95rem;
+            color: #718096;
+            margin-bottom: 15px;
+        }
+
+        .responsibilities {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .responsibilities li {
+            font-size: 0.98rem;
+            color: #4a5568;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .responsibilities li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .degree {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .university {
+            font-size: 1rem;
+            color: #667eea;
+            margin-bottom: 5px;
         }
 
         .social-links {
@@ -87,6 +202,7 @@
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 40px;
         }
 
         .social-link {
@@ -108,56 +224,220 @@
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
         }
 
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-            margin: 40px 0;
-        }
-
         .footer {
-            margin-top: 40px;
+            margin-top: 50px;
+            text-align: center;
             color: #a0aec0;
             font-size: 0.9rem;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .container {
-                padding: 40px 25px;
+                padding: 40px 30px;
             }
 
             h1 {
                 font-size: 2rem;
             }
 
-            .subtitle {
-                font-size: 1rem;
+            .title {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
             }
 
             .bio {
                 font-size: 1rem;
             }
 
-            .social-link {
-                padding: 10px 20px;
-                font-size: 0.9rem;
+            .job-title {
+                font-size: 1.1rem;
+            }
+
+            .company {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="profile-image">MA</div>
-        
-        <h1>Melih Aksoy</h1>
-        <p class="subtitle">Welcome to my personal website</p>
-        
+        <div class="header">
+            <div class="profile-image">MA</div>
+            <h1>Melih Aksoy</h1>
+            <p class="title">SR. ANDROID ENGINEER</p>
+            <div class="contact-info">
+                <span class="contact-item">📍 Almere, Netherlands</span>
+                <span class="contact-item">📧 aksoy.melihcan@gmail.com</span>
+                <span class="contact-item">📱 +31648767257</span>
+            </div>
+        </div>
+
         <div class="divider"></div>
-        
-        <p class="bio">
-            Hello! I'm Melih Aksoy. This is my personal space on the web where I share my work, 
-            thoughts, and projects. Feel free to explore and connect with me through the links below.
-        </p>
-        
+
+        <div class="section">
+            <h2 class="section-title">Who Am I</h2>
+            <p class="bio">
+                I am an experienced Android developer with 10 years of expertise, having built and maintained mobile applications used by millions. I specialize in Android SDK, Kotlin, Java, Gradle and Jetpack Compose with a deep understanding of core Kotlin features, coroutines, and functional programming. I have a strong grasp of system design, modularization, and SOLID principles, and I have worked extensively with various architectures, including clean, layered, and hexagonal. I am highly proficient in multi-threading, reactive programming, BFF programming, and Android Studio. Additionally, I have expertise in dependency injection and frameworks such as Dagger 2, Hilt, and Anvil, and advanced Git skills for seamless version control and team collaboration.
+            </p>
+            <br>
+            <p class="bio">
+                I have closely collaborated with data teams on A/B testing and have operated as an independent contributor across various cross-functional teams. In addition to delivering high-performance, scalable apps, I have guided and mentored other developers on multiple projects, ensuring best practices and high-quality solutions.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="experience-item">
+                <div class="job-title">Sr. Android Engineer II</div>
+                <div class="company">Getir - Amsterdam</div>
+                <div class="period">2022-2024</div>
+                <ul class="responsibilities">
+                    <li>Enhanced customer engagement with food offers and loyalty for Getir Food by approximately 20% in Turkey through improved loyalty, promotion, and announcement functionalities in a cross-functional team.</li>
+                    <li>Collaborated with more than 50 Android developers on various internal projects.</li>
+                    <li>Lead restructuring of a monolithic codebase into domain related feature modules to reduce conflicts, minimize revisions, and enhance product and development quality over the company.</li>
+                    <li>Implemented architectural guidelines to streamline development and release processes.</li>
+                    <li>Lead the definition of new feature requirements and designs for the Getir Food Android team.</li>
+                    <li>Created detailed feature proposals and RFCs to influence decision-making processes within all development teams.</li>
+                    <li>Worked with data analysts to optimize user experience and engagement through A/B testing.</li>
+                    <li>Provided guidance on architecture, design, functional programming, modularization, and performance to developers through workshops and presentations.</li>
+                    <li>Conducted interviews with candidates of different experience levels to support HR and recruitment teams.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Android Engineer</div>
+                <div class="company">IKEA - Amsterdam</div>
+                <div class="period">2021-2022</div>
+                <ul class="responsibilities">
+                    <li>Implemented an in-store shopping experience with the Scan & Go feature at IKEA to elevate customers' shopping journey, slashing checkout time by nearly 80%.</li>
+                    <li>Worked closely with product, backend, and design teams to craft an exceptional customer experience.</li>
+                    <li>Collaborated with the data analytics department to boost user engagement and enhance the experience through A/B testing.</li>
+                    <li>Partnered with the Android team to improve the application's architecture and scalability.</li>
+                    <li>Enhanced Continuous Integration/Continuous Deployment (CI/CD) processes for a smoother development workflow.</li>
+                    <li>Explored and integrated new trends to enrich the developer experience, including the introduction of design documents.</li>
+                    <li>Delivered internal presentations, workshops, and demonstrations to keep the team informed and engaged.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Sr. Android Engineer</div>
+                <div class="company">Moneyou - Amsterdam</div>
+                <div class="period">2020-2021</div>
+                <ul class="responsibilities">
+                    <li>Collaborated with UI/UX and backend engineers to introduce new features to the Moneyou app, enhancing its overall functionality.</li>
+                    <li>Elevated the quality and performance of the existing code base through a comprehensive refactoring process.</li>
+                    <li>Swiftly addressed customer incidents and resolved bugs to maintain a seamless user experience.</li>
+                    <li>Contributed actively to defining and refining development tasks in both Scrum and Kanban methodologies.</li>
+                    <li>Improved Continuous Integration/Continuous Deployment (CI/CD) processes and automated tasks for increased efficiency.</li>
+                    <li>Created scripts and tools to simplify tasks for fellow developers, fostering a more streamlined workflow.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Sr. Android Engineer</div>
+                <div class="company">Mediahuis - Amsterdam</div>
+                <div class="period">2018-2020</div>
+                <ul class="responsibilities">
+                    <li>Enhanced the Telegraaf Android app by introducing new features, resolving issues, and enhancing its performance.</li>
+                    <li>Revamped the design and layout of a "whitelabel" app encompassing all Mediahuis brands such as Telegraaf, Het Nieuwsblad, and Metro.</li>
+                    <li>Assisted in defining and structuring tasks for improved development efficiency.</li>
+                    <li>Collaborated with various teams to ensure a cohesive and user-centric experience across all Mediahuis brand apps.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Android Engineer</div>
+                <div class="company">Elements Interactive - Almere</div>
+                <div class="period">2017-2018</div>
+                <ul class="responsibilities">
+                    <li>Developing and supporting applications for renowned brands such as KPN and McDonald's.</li>
+                    <li>Engaging with customers to understand their needs and translating them into app strategies.</li>
+                    <li>Assisting and mentoring junior team members.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Android Engineer</div>
+                <div class="company">Turkcell - Istanbul</div>
+                <div class="period">2016-2017</div>
+                <ul class="responsibilities">
+                    <li>Contributed to the revamp of fizy, Turkcell's music app, enhancing its modernity and efficiency.</li>
+                    <li>Integrated exciting new features during the app rewrite to enhance user experience and compete with other music applications.</li>
+                    <li>Collaborated with the design team to implement top-notch practices and designs into the new app.</li>
+                    <li>Partnered with the testing team to guarantee the new application passes quality assurance.</li>
+                    <li>Collaborated with the data team to ensure our application aligns with user expectations.</li>
+                    <li>Addressed a variety of customer issues concerning Android, connectivity, and streaming.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Android Engineer</div>
+                <div class="company">Mobven - Istanbul</div>
+                <div class="period">2014-2016</div>
+                <ul class="responsibilities">
+                    <li>Engaging with clients to align our work with their app expectations.</li>
+                    <li>Enhancing and optimizing existing apps we manage for improved performance.</li>
+                    <li>Collaborating with the team to brainstorm innovative ideas for enhancement.</li>
+                    <li>Participating in the development of internal products for automated testing and enhanced quality assurance.</li>
+                    <li>Staying updated on and implementing the newest technologies to enhance customer apps.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <span class="skill-tag">Kotlin</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Android SDK</span>
+                <span class="skill-tag">Jetpack Compose</span>
+                <span class="skill-tag">Gradle</span>
+                <span class="skill-tag">Coroutines</span>
+                <span class="skill-tag">Functional Programming</span>
+                <span class="skill-tag">Reactive Programming</span>
+                <span class="skill-tag">Dagger2</span>
+                <span class="skill-tag">Hilt</span>
+                <span class="skill-tag">Anvil</span>
+                <span class="skill-tag">Clean Architecture</span>
+                <span class="skill-tag">SOLID Principles</span>
+                <span class="skill-tag">Modularization</span>
+                <span class="skill-tag">KMP</span>
+                <span class="skill-tag">gRPC</span>
+                <span class="skill-tag">GraphQL</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">System Design</span>
+                <span class="skill-tag">Agile Methodologies</span>
+                <span class="skill-tag">Mentorship</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <div class="degree">Bachelor of Software Engineering</div>
+                <div class="university">Bahcesehir University</div>
+                <div class="period">2009-2014</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Languages</h2>
+            <p class="bio">Turkish, English</p>
+        </div>
+
+        <div class="divider"></div>
+
         <div class="social-links">
             <a href="https://github.com/melihaksoy" class="social-link" target="_blank" rel="noopener">
                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -178,7 +458,7 @@
                 Email
             </a>
         </div>
-        
+
         <div class="footer">
             <p>&copy; 2025 Melih Aksoy. All rights reserved.</p>
         </div>
